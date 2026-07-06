@@ -52,3 +52,8 @@ phase1-*.png
 *.png
 !docs/images/*.png
 !design/cover.png
+
+# Agent guidelines and tools
+AGENTS.md
+CLAUDE.md
+.agents/
