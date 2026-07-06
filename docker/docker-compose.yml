@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: zagoour-portfolio-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: zagoour_portfolio
+      POSTGRES_USER: zagoour
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - zagoour_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U zagoour -d zagoour_portfolio"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: zagoour-portfolio-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://zagoour:password@postgres:5432/zagoour_portfolio
+      SESSION_SECRET: b285e683bb5be3d6c8137330ee0d8d73b06deba5631c51b47b8de65e23631980
+      NODE_ENV: production
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  zagoour_postgres_data:

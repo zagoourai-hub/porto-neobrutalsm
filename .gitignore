@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.next/
+frontend/.next/
+out/
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+!frontend/.env.example
+
+# Prisma generated
+generated/
+frontend/generated/
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker/data/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Playwright & Design scratch
+.playwright-mcp/
+design/.work/
+phase1-*.png
+*.png
+!docs/images/*.png

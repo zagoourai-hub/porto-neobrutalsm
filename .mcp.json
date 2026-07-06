@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest", "--browser", "chrome"]
+    },
+     "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    },
+       "gsap-master": {
+      "command": "npx",
+      "args": ["bruzethegreat-gsap-master-mcp-server@latest"]
+    }
+  }
+}
