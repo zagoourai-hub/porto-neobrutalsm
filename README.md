@@ -1,5 +1,7 @@
 # RiszDev Portfolio - Cyber-Neobrutalism UI 🚀
 
+![RiszDev Portfolio - Cyber-Neobrutalism Cover](./design/cover.png)
+
 Website portofolio interaktif dan sistem manajemen konten (CMS) admin bertema **Cyber-Neobrutalism UI** yang premium, modern, dan berkinerja tinggi. Dibangun menggunakan teknologi web terkini seperti **Next.js 16 (App Router)**, **Tailwind CSS v4**, **Prisma v7**, **PostgreSQL 16**, dan animasi **GSAP**.
 
 ---
